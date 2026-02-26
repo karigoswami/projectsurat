@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Farmers Crop Upload and Display</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-X: hidden;
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color:orange;
+          
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        .logo img{
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            
+        }
+        .logo h3{
+        text-transform: capitalize;
+        color: white;
+        cursor: pointer;
+        }
+        .head{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .head a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color:white;
+            cursor: pointer;
+           
+        }
+        .head a:hover{
+            color:blueviolet;
+        }
+        .head input{
+            height: 40px;
+            padding: 20px;
+            background-color:bisque;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+       
+        button{
+            padding: 20px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            text-transform: capitalize;
+            background-color:bisque;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color:blueviolet;
+             color: white;
+        }
+        li{
+            list-style: none;
+        }
+       
+        .product{
+            display: none;
+           
+        }
+        .product a{
+            color: black;
+        }
+        .product{
+            content: "";
+			position: absolute;
+			top: 50px;
+			left: 440px;
+            height: 70px;
+            width: 70px;
+            background-color:blanchedalmond;
+            padding: 10px;
+            border-radius: 10px;
+           
+
+        }
+        .product a:hover{
+            color: red;
+        }
+
+        
+        .page:hover .product{
+            display: block;
+            position: absolute;
+           
+        }
+        .toggle {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none; /* hide on desktop */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.upload-section {
+    background: #f0f8ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.upload-section h1 {
+    font-size: 28px;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.upload-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea,
+.upload-form input[type="file"] {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.upload-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f0b445, #f9d37b);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.upload-form button:hover {
+    background: linear-gradient(135deg, #7e57c2, #9575cd);
+    transform: translateY(-2px);
+}
+
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 24px;
+    color: #0d47a1;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.crop-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.crop-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.crop-card h3 {
+    font-size: 20px;
+    margin: 15px 10px 5px 10px;
+    color: #2e7d32;
+}
+
+.crop-card p {
+    font-size: 14px;
+    margin: 0 10px 15px 10px;
+    color: #555;
+}
+.footer{
+    background-color: #2a2f3a;
+    height: 400px;
+    width: 100%;
+   
+   
+}
+.footer-container{
+    display: flex;
+     padding: 20px;
+  
+   justify-content: space-between;
+}
+.img1{
+    display: flex;
+    gap: 10px;
+    
+
+    
+    
+}
+.img1 img{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+   
+}
+.img1 h3{
+    color: white;
+     text-transform: capitalize;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+}
+.img1 h3:hover{
+    color: yellow;
+}
+.head-content p{
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+ .head-content p:hover{
+    color: yellow;
+}
+.ptext {
+    width: 250px;
+    flex-direction: column;
+}
+.ptext p{
+    margin-bottom: 30px;
+    color: white;
+    cursor: pointer;
+}
+.ptext p:hover{
+    color: yellow;
+}
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 30px;
+    width: 150px;
+}
+.post img:hover{
+    transform: translateY(-6px);
+}
+.post img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    
+}
+ .h3{
+    color: white;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.h3:hover{
+    color: yellow;
+}
+
+.copyright p:hover{
+    color: yellow;
+}
+.copyright p{
+    margin-bottom: 20px;
+}
+
+
+
+
+      @media (max-width: 768px)  {
+        .main{
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 20px;
+        }
+        .head{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+            width: 100%;
+            position: relative;
+        }
+         .toggle {
+        display: block; /* show on mobile */
+    }
+
+    .toggle:hover {
+        color: black;
+        transform: scale(1.2);
+    }
+     .footer{
+        height: auto;
+    }
+    .footer-container{
+    flex-direction: column;
+    
+    
+}
+.post{
+    margin-bottom: 20px;
+}
+
+.ptext{
+    width: 400px;
+}
+.post{
+    width: 250px;
+}
+.head-content p{
+    margin-bottom: 20px;
+}
+}
+
+</style>
+<body>
+     <div class="main">
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-vector/agriculture-farm-logo-vector-white-background_1266257-25982.jpg?w=360" alt="">
+            <h3>radhe farming</h3>
+           
+        </div>
+        <div class="toggle">
+    <i class="fas fa-bars"></i>
+</div>
+        <div class="head">
+            <a href="project.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="service.html">service</a>
+           
+           <li class="page" > <a href="#">page</a>
+               <ul>
+                <li class="product">
+                    <a href="product.html">product</a>
+                    <a href="image.html">image</a>
+                </li>
+               </ul>
+            </li>
+            
+            <a href="contact.html">contact us</a>
+
+            <input type="search" placeholder="search" required >
+          <div class="btn">
+            <a href="#">
+            <button>
+                login
+            </button></a></div>
+            
+        </div>
+    </div>
+<section class="upload-section">
+    <h1>Upload Your Good Crops</h1>
+    <form class="upload-form">
+        <input type="text" placeholder="Crop Name" required>
+        <textarea placeholder="Write crop information..." rows="4" required></textarea>
+        <input type="file" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+</section>
+
+<section class="gallery">
+    <h2>Shared Crops by Farmers</h2>
+    <div class="gallery-grid">
+        <div class="crop-card">
+            <img src="https://cdn.britannica.com/16/187216-050-CB57A09B/tomatoes-tomato-plant-Fruit-vegetable.jpg" alt="Crop">
+            <h3>Tomato</h3>
+            <p>These tomatoes are organic, healthy, and ready for sale. Cultivated using drip irrigation.</p>
+        </div>
+        <div class="crop-card">
+            <img src="https://m.media-amazon.com/images/I/5195skfRs+L._UF1000,1000_QL80_.jpg" alt="Crop">
+            <h3>Wheat</h3>
+            <p>High-quality wheat cultivated with organic fertilizers, providing better yield.</p>
+        </div>
+        <div class="crop-card">
+            <img src="https://media.istockphoto.com/id/1273378551/photo/set-of-summer-fruits-and-berries-in-wooden-serving.jpg?s=612x612&w=0&k=20&c=XtJFQDgpV_AsG3aFzo3FVN2pmbey7h0jWHMzlHWJ5Kk=" alt="Crop">
+            <h3>Fruitr</h3>
+            <p>Fresh bananas from our farm, grown naturally without chemicals.</p>
+        </div>
+    </div>
+</section>
+<div class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="img1">
+                <img src="https://img.freepik.com/premium-vector/agriculture-farm-logo-vector-white-background_1266257-25982.jpg?w=360"alt="">
+                <h3>organic farmimg</h3></div>
+                <div class="ptext">
+<p>In Germany, Rudolf Steiner's development, biodynamic agriculture, was probably the first comprehensive system of what we now call organic farming.</p>
+    <p>This began with a lecture series Steiner presented at a farm in Koberwitz (Kobierzyce now in Poland) in 1924.</p>
+    </div>        </div>
+ <div class="footer-section">
+                <h3 class="h3">rect post</h3>
+ <div class="post">
+                       <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/news6969.jpg" alt="">
+                    <img src="https://img.freepik.com/free-photo/close-up-delicious-organic-tomatoes_23-2149125238.jpg?semt=ais_hybrid&w=740" alt="">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnlmLCoGki2UinTntOUEPCvj4-WlYC_EjY9g&s" alt="">
+               
+               <img src="https://media.istockphoto.com/id/1187320693/photo/the-farmer-holds-a-money-bag-on-the-background-of-plantations-lending-and-subsidizing-farmers.jpg?s=612x612&w=0&k=20&c=mpXsJO0x11Nro_AC6OdWXlfV9jYeiTOYKSMCZfFktco=" alt="">
+               <img src="https://www.blueflamebiodigesters.com/wp-content/uploads/2022/12/Organic-Farm-1170x675.webp" alt="">
+               <img src="https://thumbs.dreamstime.com/b/rows-plantation-young-pepper-farm-sunny-day-growing-organic-vegetables-eco-friendly-products-agriculture-land-153885087.jpg" alt="">
+            </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="h3">service</h3>
+<div class="head-content">
+                <p>Weed & Pest Control</p>
+                 <p>Grass Seeding</p>
+                  <p>Programs & Grants</p>
+                   <p>Agricultural Products</p>
+                   <p>Education & event</p>
+        </div>
+            </div>
+
+
+            <div class="footer-section">
+                <h3 class="h3">contact</h3>
+                <div class="head-content">
+ <p><i class="fas fa-map-marker-alt"></i> Location</p>
+      <p><i class="fas fa-phone"></i> Call +123-456-7890</p>
+      <p><i class="fas fa-envelope"></i> demo@gmail.com</p></div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="copyright" style="display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;cursor: pointer;">
+   <p> © 2025 All Rights Reserved By Free Html,Css Templates</p>
+   <p>© Distributed By RadhekrishnaFarming</p>
+  </div>
+    </div>
+</body>
+</html>

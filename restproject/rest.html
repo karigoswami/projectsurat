@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+     *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        
+        /* .logo{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: capitalize;
+            -webkit-text-stroke-color: rgba(255, 0, 179, 0.879);
+            -webkit-text-stroke-width: 0.5px;
+
+        } */
+         .main{
+            position: relative;
+            background-color: black;
+            height: 500px;
+         }
+         /* .main img{
+            position: absolute;
+            top: 180px;
+            right: 0;
+            height: 300px;
+            width: 60%;
+            z-index: 0;
+           
+            
+         } */
+ @keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main img {
+    position: absolute;
+    top: 180px;
+    right: 0;
+    height: 300px;
+    width: 60%;
+    z-index: 0;
+
+    animation: scaleIn 8s infinite;
+}
+
+
+         header{
+           position: sticky;
+           top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            
+         }
+         .logo{
+            font-family:cursive;
+            text-transform: capitalize;
+            color: white;
+            font-size: 20px;
+            /* -webkit-text-stroke-color: rgb(255, 255, 255);
+            -webkit-text-stroke-width: 0.5px; */
+            cursor: pointer;
+         }
+         .head{
+            color: white;
+            display: flex;
+            gap:30px;
+         }
+         .head a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color: white;
+            cursor: pointer;
+            
+         }
+         a:hover{
+            color: orange;
+
+         }
+         #home{
+         
+            color: orange;
+            
+         }
+         .icon{
+            display: flex;
+            align-items: center;
+            gap:10px;
+            cursor: pointer;
+         }
+         .icon i:hover{
+            color: orange;
+         }
+         .icon i{
+            color: white;
+         }
+         .btn{
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            background-color: orange;
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+         }
+         .btn:hover{
+            background-color: rgb(230, 176, 76);
+         }
+         .food{
+            position: absolute;
+            color: white;
+            width: 60%;
+            padding: 40px;
+            z-index: 1;
+         }
+         .food h1{
+            margin-bottom: 20px;
+            font-family: cursive;
+         }
+         .food p{
+            margin-bottom: 30px;
+         }
+         .food .btn{
+             padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            background-color: orange;
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+        
+
+         }
+         .food .btn:hover{
+            background-color: rgb(237, 180, 75);
+         }
+         .menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.third{
+    height: 200px;
+    width: 420px;
+    border-radius: 7px;
+    border: none;
+    background-color: #2a2f3a;;
+}
+.img{
+    display: flex;
+    
+   
+   
+    
+
+}
+.text {
+ display: flex;
+ flex-direction: column;
+justify-content: center;
+ 
+
+}
+
+.text h1 {
+ 
+  color: orange;
+  font-size: 20px;
+  font-family:cursive;
+}
+
+.text h5 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.inner img{
+   
+    height: 200px;
+    width:200px;
+     clip-Path:circle(40%);
+     cursor: pointer;
+     
+     
+}
+
+.img img {
+  transition: transform 0.5s ease;
+  
+    
+   
+  
+}
+
+.img img:hover {
+  transform: scale(1.1);
+}
+
+
+.th{
+   
+     display: flex;
+   
+    gap: 50px; /* space between cards */
+    padding: 50px;
+   
+    flex-wrap: wrap; 
+   
+}
+
+.btnorder{
+   
+     padding: 10px 50px;
+    border-radius: 20px;
+    color: white;
+    background-color: orange;
+    text-transform: capitalize;
+    border: none;
+    
+    
+
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: cursive;
+    color:#2a2f3a ;
+    font-size: 35px;
+    
+    
+}
+.all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+     color: black;
+    text-transform: capitalize;
+    
+}
+.color{
+    text-align: center;
+    background-color:#2a2f3a ;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+   
+}
+.padding{
+    padding: 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.card{
+   
+    height: 400px;
+    width: 290px;
+    background-color:whitesmoke;
+    border-radius: 20px;
+    overflow: hidden;
+   
+    
+}
+.imgcard{
+   
+    display: flex;
+    justify-content: center;
+    
+}
+.imgcard img{
+   
+    height: 200px;
+    width: 200px;
+    clip-path: circle(40%);
+     transition: transform 0.5s ease;
+}
+.imgcard img:hover {
+  transform: scale(1.1);
+}
+.texth1 {
+    background-color: #2a2f3a;
+    padding: 30px;
+     
+    
+    
+    
+}
+.texth1 h1{
+    margin-bottom: 10px;
+    color: white;
+}
+.texth1 p{
+    margin-bottom: 5px;
+    color: white;
+}
+.price{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+.price p{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price .cart-btn {
+    
+  background: #ffc107;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  
+}
+.price .cart-btn:hover{
+    background-color: rgb(236, 179, 73);
+}
+
+.btnview{
+    
+      padding: 10px 30px;
+            border-radius: 20px;
+            color: white;
+            background-color: orange;
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+
+}
+.btnview:hover{
+    background-color: rgb(232, 183, 91);
+}
+.view{
+    display: flex;
+    justify-content: center;
+     margin-bottom: 50px;
+}
+
+.back{
+   
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-color: #2a2f3a;
+}
+.imgburger img{
+    position: absolute;
+    top: -20px;
+    height: 600px;
+    width: 500px;
+}
+.texth2{
+    position: absolute;
+    top: 150px;
+    left: 500px;
+   right: 20px;
+   color: white;
+    
+    
+}
+.texth2 h1{
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+.texth2 p{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.read{
+    
+     margin-bottom: 50px;
+}
+.btnread{
+      padding: 10px 30px;
+            border-radius: 20px;
+            color: white;
+            background-color: orange;
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+}
+
+.btnread:hover{
+    background-color: rgb(232, 183, 91);
+}
+.btnread1{
+      padding: 10px 30px;
+            border-radius: 20px;
+            width: 200px;
+            color: white;
+            background-color: orange;
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+}
+
+.btnread1:hover{
+    background-color: rgb(232, 183, 91);
+}
+.container{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.book{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+      padding: 40px;
+      /* position: relative; */
+   
+}
+.book h1{
+    font-family: cursive;
+    text-transform: capitalize;
+}
+input{
+    /* width: 40%; */
+    padding: 0px 15px;
+    height: 40px;
+
+}
+.table{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    /* position: absolute;
+    top: 120px;
+    right: 40px; */
+   
+}
+.footer{
+    background-color: #2a2f3a;
+    height: 300px;
+    padding: 50px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    
+    
+   
+}
+.footer-section h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: cursive;
+} 
+.footer-section h3:hover{
+    color: yellow;
+}     
+.footer-section p{
+    color: white;
+    margin-bottom: 30px;
+    font-family: cursive;
+}
+.footer-section p:hover{
+    color: #ffc107;
+}
+.social-icons{
+    padding: 0px 80px;
+}
+.social-icons a{
+    display: inline-block;
+   
+    flex-direction: row;
+    height: 35px;
+    width: 35px;
+    background-color:aqua;
+    border-radius: 50px;
+   
+    line-height: 35px;
+      text-align: center;
+      
+   
+}
+.social-icons a:hover{
+    background-color: rgb(187, 227, 227);
+}
+.copyright{
+    text-align: center;
+    color: white;
+
+}
+@media (max-width: 700px) {
+    .icon {
+        display: none;
+    }
+
+   /* By default, hide the menu */
+.head {
+  display: none;
+  height: 10px;
+}
+
+/* When hover on .menu-toggle, show the menu */
+header:hover .head {
+   
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100px;
+  width: 100%;
+  text-align: left;
+}
+
+
+    
+    .logo {
+        width: 100%;
+        text-align: start;      
+    }
+
+    .food {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .food h1 {
+        font-size: 22px;
+    }
+
+    .food p {
+        font-size: 14px;
+    }
+
+    .main img {
+        width: 100%;
+        height: auto;
+        top: 200px;
+    }
+
+    .menu-toggle {
+        display: block; /* 👈 Show menu icon on small screens */
+    }
+    .th{
+        display: flex;
+        gap: 50px;
+    }
+    .padding{
+      padding: 100px;
+    }
+    .card{
+        width: 100%;
+    }
+    .back {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .imgburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgburger img {
+    width: 90%;
+    height: auto;
+    position: static;
+    max-width: 400px;
+  }
+
+  .texth2 {
+    position: static;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .texth2 h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .texth2 p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btnread {
+    width: auto;
+  }
+
+    .container{
+        flex-direction: column;
+        
+    }
+    .book{
+        width: 100%;
+    }
+    .table{
+        width: 100%;
+    }
+    .footer{
+        height: 100%;
+        width: 100%;
+    }
+    .footer-container{
+        flex-direction: column;
+
+    }
+.social-icons {
+    display: flex;
+    gap: 20px;
+   
+}
+.social-icons a {
+    height: 35px;
+    width: 35px;
+}
+}
+
+
+
+      
+         
+  </style>
+</head>
+<body>
+    <div class="main">
+        <img src="img.png" alt="">
+        <header>
+            <div class="logo">radhekrishna</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="bi bi-list"></i>
+  </div>
+            <div class="head">
+                <a id="home" href="#">home</a>
+                <a href="#">menu</a>
+                <a href="#">about</a>
+                <a href="#">book table</a>
+            </div>
+            <div class="icon">
+                <i class="bi bi-person-fill"></i>
+                <i class="bi bi-cart-fill"></i>
+                <i class="bi bi-search"></i>
+               <a href="practice.html">
+                <button class="btn">
+                order online
+            </button></a>
+            </div>
+           
+        </header>
+        <div class="food">
+            <h1>RadheKrishna Restaurant</h1>
+            <p>Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.</p>
+         <button class="btn">
+                order book
+            </button>
+        </div>
+        
+       
+    </div>
+    <div class="th">
+    <div class="third">
+        <div class="inner">
+        <div class="img">
+            <img src="https://img.freepik.com/free-photo/pizza-pizza-filled-with-tomatoes-salami-olives_140725-1200.jpg" alt="">
+        <div class="text">
+            <h1>Tasty Thursdays</h1>
+        <h5>20% Off</h5> 
+        
+        <button class="btnorder">
+                order book
+            </button></div>
+
+        </div>
+        
+    </div>
+    </div>
+     <div class="third">
+        <div class="inner">
+        <div class="img">
+            <img src="https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png" alt="">
+        <div class="text">
+            <h1>Tasty Thursdays</h1>
+        <h5>20% Off</h5> 
+        
+        <button class="btnorder">
+                order book
+            </button></div>
+
+        </div>
+        
+    </div>
+    </div>
+     
+    </div>
+   <div class="menu">
+    <p>our menu</p></div>
+    <div class="all">
+    <div class="color" id="click">all</div>
+    <div  id="click">burger</div>
+    <div id="click">pizza</div>
+    <div  id="click">pasta</div>
+    <div  id="click">fries</div>
+    </div>
+<div class="padding">
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://images.jdmagicbox.com/v2/comp/hyderabad/z6/040pxx40.xx40.180531201557.x5z6/catalogue/delicious-pizza-house-karkhana-hyderabad-pizza-delivery-services-qeec3.jpg" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹200</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+          </div>
+        </div>
+      
+    </div>
+     <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrp1gdlqB1CJ3LmGXfEd7TwP-KQM6N2muPsg&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹300</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb1lpruKcy8C9rhAWKCcPOFuvToDRembz-oA&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹280</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEQ9IjUOFn8JxtVzjj2KKdg9pcgi0fh7NBrQ&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹290</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPZKeB5xYh_jQ12Q1X3o8a6hvGgO34EBNqQ&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹300</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVLaIGZO4ndozRfrWgdlPwSE4rzT7K4jX1g&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹200</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuWvD5XhN2ZmdWu3WyFdXKffIP-f9CkMqHbA&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹200</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleos4bUTU-jjyjg4pb9rEiKPCQ6ziRkIO9Q&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹200</p>
+            <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+      
+    </div>
+   
+    <div class="card">
+        <div class="imgcard">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKza9ClM87PYugzj7ohg7a7i6hO1eXFRk25A&s" alt="">
+        </div>
+        <div class="texth1">
+            <h1>Delicious Pizza</h1>
+            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+          <div class="price">
+            <p>₹200</p>
+           <button class="cart-btn"><i class="bi bi-cart-fill"></i></button>
+        </div>
+        </div>
+
+      
+    </div>
+    </div>
+        
+    <div class="view">
+        <button class="btnview">
+                view more
+            </button></div>
+   
+   
+<div class="padd">
+    <div class="back">
+        <div class="imgburger">
+            <img src="burger.png" alt="">
+            <div class="texth2">
+                <h1>We Are Feane</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All</p>
+                <div class="read">
+        <button class="btnread">
+                read more
+            </button></div>
+            </div>
+        </div>
+    </div>
+    </div>
+   
+    <div class="container">
+        <div class="book">
+            <h1>book a table</h1>
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="phone number">
+            <input type="text" placeholder="your email">
+            
+            <select id="persons" name="persons" style=" height: 40px; padding: 0px 15px;">
+                <option value="" disabled selected >How many persons?</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="date">
+            <button class="btnread1" >
+                book now
+            </button>
+        </div>
+        <div class="table">
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29759.766590097624!2d72.8661234640826!3d21.193317958240023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1745300221493!5m2!1sen!2sin" width="500" height="300" style="border-radius:10px"; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ; ></iframe>
+        </div>
+    </div>    
+        <!-- <div class="read1" >
+                <button class="btnread" style="width: 20%;">
+                book now
+            </button>
+        </div> -->
+    
+    
+
+<div class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Location</p>
+      <p><i class="fas fa-phone"></i> Call +123-456-7890</p>
+      <p><i class="fas fa-envelope"></i> demo@gmail.com</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>RadheKrishna</h3>
+      <p>Necessary, making this the first true generator<br>
+      on the Internet. It uses a dictionary of over 200<br>
+      Latin words, combined with</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Opening Hours</h3>
+      <p>Everyday</p>
+      <p >
+        10.00 Am -10.00 Pm
+      </p>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2025 All Rights Reserved By Free Html Templates<br>
+    © Distributed By radhekrishna
+  </div>
+</div>
+</body>
+</html>
+<!-- https://themewagon.github.io/feane/? -->

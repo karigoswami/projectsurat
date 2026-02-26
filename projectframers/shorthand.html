@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let a=10;
+        // a-=10;
+        // console.log(a);
+        // //increment decrement
+        // let x=20,y;
+        // y=x++;
+        // console.log(y);
+        // console.log(x);
+
+        // //pre increment fisrt x original increment itself and then value assign to y
+        // y=++x;
+        // console.log(y);
+        // console.log("x="+x);
+        
+        
+        // x--;
+        // console.log(x);
+        function CheckNumber(){
+            let num1 =document.getElementById('num1').value;
+
+            (num1 > 0)?alert(`${num1} is positive`):alert(`${num1} is nagative`);
+//conditional opretor
+            let name;
+            alert(name ?? "fenil");
+        }
+    </script>
+</head>
+<body>
+     <form method="post">
+        <fieldset>
+            <legend>
+                javascript arithmethic opretor
+            </legend>
+            <label for="">enter the number</label>
+            <input type="text" id="num1"  required><br><br>
+
+           
+            
+            <input type="button" value="Click" onclick="CheckNumber()" required>
+       <p id="result"></p>
+        </fieldset>
+    </form>
+
+</body>
+</html>

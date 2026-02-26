@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Footer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #2a2d37;
+    padding: 40px 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: white;
+    font-size: 20px;
+}
+
+.footer-column h3:hover {
+    color: orange;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    color: orange;
+}
+
+.head-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.head-text img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+}
+
+.post-grid img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.post-grid img:hover {
+    transform: scale(1.05);
+}
+
+.pcopy {
+    text-align: center;
+    padding: 20px 0 0;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+</style>
+</head>
+<body>
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-column">
+            <div class="head-text">
+                <img src="https://img.freepik.com/premium-vector/agriculture-farm-logo-vector-white-background_1266257-25982.jpg?w=360" alt="">
+                <h3>organic farming</h3>
+            </div>
+            <p>In Germany, Rudolf Steiner's development, biodynamic agriculture, was probably the first comprehensive system of what we now call organic farming.</p>
+            <p>This began with a lecture series Steiner presented at a farm in Koberwitz (Kobierzyce now in Poland) in 1924.</p>
+        </div>
+
+        <!-- Recent Post Section -->
+        <div class="footer-column">
+            <h3>recent post</h3>
+            <div class="post-grid">
+                <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/news6969.jpg" alt="">
+                <img src="https://img.freepik.com/free-photo/close-up-delicious-organic-tomatoes_23-2149125238.jpg?semt=ais_hybrid&w=740" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnlmLCoGki2UinTntOUEPCvj4-WlYC_EjY9g&s" alt="">
+                <img src="https://media.istockphoto.com/id/1187320693/photo/the-farmer-holds-a-money-bag-on-the-background-of-plantations-lending-and-subsidizing-farmers.jpg?s=612x612&w=0&k=20&c=mpXsJO0x11Nro_AC6OdWXlfV9jYeiTOYKSMCZfFktco=" alt="">
+                <img src="https://www.blueflamebiodigesters.com/wp-content/uploads/2022/12/Organic-Farm-1170x675.webp" alt="">
+                <img src="https://thumbs.dreamstime.com/b/rows-plantation-young-pepper-farm-sunny-day-growing-organic-vegetables-eco-friendly-products-agriculture-land-153885087.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="footer-column">
+            <h3>services</h3>
+            <p>Weed & Pest Control</p>
+            <p>Grass Seeding</p>
+            <p>Programs & Grants</p>
+            <p>Agricultural Products</p>
+            <p>Education & Event</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-column">
+            <h3>contact</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Location</p>
+            <p><i class="fas fa-phone"></i> Call +123-456-7890</p>
+            <p><i class="fas fa-envelope"></i> demo@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="pcopy">
+        &copy; radhekrishna organic farming
+    </div>
+</footer>
+
+</body>
+</html>

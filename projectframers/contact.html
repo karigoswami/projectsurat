@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-X: hidden;
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color:orange;
+          
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        .logo img{
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            
+        }
+        .logo h3{
+        text-transform: capitalize;
+        color: white;
+        cursor: pointer;
+        }
+        .head{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .head a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color:white;
+            cursor: pointer;
+           
+        }
+        .head a:hover{
+            color:blueviolet;
+        }
+        .head input{
+            height: 40px;
+            padding: 20px;
+            background-color:bisque;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+       
+        button{
+            padding: 20px;
+            width: 100px;
+            border-radius: 10px;
+            border: none;
+            text-transform: capitalize;
+            background-color:bisque;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color:blueviolet;
+             color: white;
+        }
+        li{
+            list-style: none;
+        }
+       
+        .product{
+            display: none;
+           
+        }
+        .product a{
+            color: black;
+        }
+        .product{
+            content: "";
+			position: absolute;
+			top: 50px;
+			left: 440px;
+            height: 70px;
+            width: 70px;
+            background-color:blanchedalmond;
+            padding: 10px;
+            border-radius: 10px;
+           
+
+        }
+        .product a:hover{
+            color: red;
+        }
+
+        
+        .page:hover .product{
+            display: block;
+            position: absolute;
+           
+        }
+        .toggle {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none; /* hide on desktop */
+    transition: transform 0.3s, color 0.3s;
+}
+.container{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.book{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+      padding: 40px;
+      /* position: relative; */
+   
+}
+.book h1{
+    font-family: cursive;
+    text-transform: capitalize;
+}
+input{
+    /* width: 40%; */
+    padding: 0px 15px;
+    height: 40px;
+
+}
+.table{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  
+   
+}
+.btn1 button{
+     padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            background-color: rgb(240, 180, 69);
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+            width:150px;
+}
+.btn1 button:hover{
+    background-color:blueviolet;
+    color:white;
+}
+
+.footer{
+    background-color: #2a2f3a;
+    height: 400px;
+    width: 100%;
+   
+   
+}
+.footer-container{
+    display: flex;
+     padding: 20px;
+  
+   justify-content: space-between;
+}
+.img1{
+    display: flex;
+    gap: 10px;
+    
+
+    
+    
+}
+.img1 img{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+   
+}
+.img1 h3{
+    color: white;
+     text-transform: capitalize;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+}
+.img1 h3:hover{
+    color: yellow;
+}
+.head-content p{
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+ .head-content p:hover{
+    color: yellow;
+}
+.ptext {
+    width: 250px;
+    flex-direction: column;
+}
+.ptext p{
+    margin-bottom: 30px;
+    color: white;
+    cursor: pointer;
+}
+.ptext p:hover{
+    color: yellow;
+}
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 30px;
+    width: 150px;
+}
+.post img:hover{
+    transform: translateY(-6px);
+}
+.post img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    
+}
+ .h3{
+    color: white;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.h3:hover{
+    color: yellow;
+}
+
+.copyright p:hover{
+    color: yellow;
+}
+.copyright p{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media (max-width: 768px)  {
+        .main{
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 20px;
+        }
+        .head{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+            width: 100%;
+            position: relative;
+        }
+         .toggle {
+        display: block; /* show on mobile */
+    }
+
+    .toggle:hover {
+        color: black;
+        transform: scale(1.2);
+    }
+   .product{
+    position: absolute;
+    left: 5px;
+    top: 160px;
+    height: 70px;
+    width: 70px;
+   }
+    .container{
+        flex-direction: column;
+        
+    }
+    .book{
+        width: 100%;
+    }
+    .table{
+        width: 100%;
+    }
+     .footer{
+        height: auto;
+    }
+    .footer-container{
+    flex-direction: column;
+    
+    
+}
+.post{
+    margin-bottom: 20px;
+}
+
+.ptext{
+    width: 400px;
+}
+.post{
+    width: 250px;
+}
+.head-content p{
+    margin-bottom: 20px;
+}
+     }
+ 
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="https://img.freepik.com/premium-vector/agriculture-farm-logo-vector-white-background_1266257-25982.jpg?w=360" alt="">
+            <h3>radhe farming</h3>
+           
+        </div>
+        <div class="toggle">
+    <i class="fas fa-bars"></i>
+</div>
+        <div class="head">
+            <a href="project.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="service.html">service</a>
+           
+           <li class="page" > <a href="#">page</a>
+               <ul>
+                <li class="product">
+                    <a href="product.html">product</a>
+                    <a href="image.html">image</a>
+                </li>
+               </ul>
+            </li>
+            
+            <a href="contact.html">contact us</a>
+
+            <input type="search" placeholder="search" required >
+          <div class="btn">
+            <a href="#">
+            <button>
+                login
+            </button></a></div>
+            
+        </div>
+    </div>
+                    <div class="container">
+                        <div class="book">
+                            <h1>contact us</h1>
+                            <input type="text" placeholder="name">
+                            <input type="text" placeholder="phone number">
+                            <input type="text" placeholder="your email">
+                            
+                        
+                            <input type="date">
+                            <textarea placeholder="Your Message" rows="5" required style="padding: 10px;"></textarea>
+                            <div class="btn1">
+                            <a href="">
+                                <button>
+                                    submit
+                                </button></a>
+                            </div>
+                            </div>
+                                <div class="table">
+                                    <img src="https://thumbs.dreamstime.com/b/contact-us-sign-concept-customer-service-41982601.jpg" alt="" style="width: 600px;">
+                            </div>
+                        </div> 
+                        </div>
+                      <div class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="img1">
+                <img src="https://img.freepik.com/premium-vector/agriculture-farm-logo-vector-white-background_1266257-25982.jpg?w=360"alt="">
+                <h3>organic farmimg</h3></div>
+                <div class="ptext">
+<p>In Germany, Rudolf Steiner's development, biodynamic agriculture, was probably the first comprehensive system of what we now call organic farming.</p>
+    <p>This began with a lecture series Steiner presented at a farm in Koberwitz (Kobierzyce now in Poland) in 1924.</p>
+    </div>        </div>
+ <div class="footer-section">
+                <h3 class="h3">rect post</h3>
+ <div class="post">
+                       <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/news6969.jpg" alt="">
+                    <img src="https://img.freepik.com/free-photo/close-up-delicious-organic-tomatoes_23-2149125238.jpg?semt=ais_hybrid&w=740" alt="">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnlmLCoGki2UinTntOUEPCvj4-WlYC_EjY9g&s" alt="">
+               
+               <img src="https://media.istockphoto.com/id/1187320693/photo/the-farmer-holds-a-money-bag-on-the-background-of-plantations-lending-and-subsidizing-farmers.jpg?s=612x612&w=0&k=20&c=mpXsJO0x11Nro_AC6OdWXlfV9jYeiTOYKSMCZfFktco=" alt="">
+               <img src="https://www.blueflamebiodigesters.com/wp-content/uploads/2022/12/Organic-Farm-1170x675.webp" alt="">
+               <img src="https://thumbs.dreamstime.com/b/rows-plantation-young-pepper-farm-sunny-day-growing-organic-vegetables-eco-friendly-products-agriculture-land-153885087.jpg" alt="">
+            </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="h3">service</h3>
+<div class="head-content">
+                <p>Weed & Pest Control</p>
+                 <p>Grass Seeding</p>
+                  <p>Programs & Grants</p>
+                   <p>Agricultural Products</p>
+                   <p>Education & event</p>
+        </div>
+            </div>
+
+
+            <div class="footer-section">
+                <h3 class="h3">contact</h3>
+                <div class="head-content">
+ <p><i class="fas fa-map-marker-alt"></i> Location</p>
+      <p><i class="fas fa-phone"></i> Call +123-456-7890</p>
+      <p><i class="fas fa-envelope"></i> demo@gmail.com</p></div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div class="copyright" style="display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;cursor: pointer;">
+   <p> © 2025 All Rights Reserved By Free Html,Css Templates</p>
+   <p>© Distributed By RadhekrishnaFarming</p>
+  </div>
+    </div>  
+</body>
+</html>

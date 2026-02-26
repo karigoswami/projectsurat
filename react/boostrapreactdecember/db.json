@@ -1,0 +1,105 @@
+{
+  "product": [
+    {
+      "image": "https://5.imimg.com/data5/SELLER/Default/2024/7/433447086/QF/FI/JB/223567909/radha-krishna-mural-paintings.jpeg",
+      "utext": "shreeji",
+      "desc": "Radha Rani is the symbol of pure and eternal love.",
+      "price": "600",
+      "id": "dd5e"
+    },
+    {
+      "image": "https://thesevencolours.com/cdn/shop/files/Radha_Krishna_Moonlight_Swing_Canvas_Romantic_Divine_Night_Painting.jpg?v=1754046828",
+      "utext": "shreeji",
+      "desc": "True friendship is eternal.",
+      "price": "600",
+      "id": "8c09"
+    },
+    {
+      "image": "https://paintwaint.in/cdn/shop/files/NewProject-2024-08-08T221245.235.png?crop=center&height=1186&v=1723142954&width=1186",
+      "utext": "shreeji",
+      "desc": "Radha Rani’s devotion teaches us true faith.",
+      "price": "400",
+      "id": "97f5"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslA6Yz3A4vSR2WoEENhR572sjqKuoojosNQ&s",
+      "utext": "shreeji",
+      "desc": "Radha Rani’s name brings peace to the heart.",
+      "price": "600",
+      "id": "2a2a"
+    },
+    {
+      "image": "https://asset.gecdesigns.com/img/wallpapers/divine-love-wallpaper-of-cute-radha-krishna-image-sr25072501-cover.webp",
+      "utext": "shreeji",
+      "desc": "Radha Rani’s love for Krishna is divine and endless.",
+      "price": "600",
+      "id": "684e"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81dcz6LL8bL._AC_UF350,350_QL50_.jpg",
+      "utext": "shreeji",
+      "desc": "Radha Rani blesses her devotees with happiness.",
+      "price": "600",
+      "id": "686f"
+    }
+  ],
+  "user": [
+    {
+      "id": "4df1",
+      "name": "johnd",
+      "email": "john@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "c7f9",
+      "name": "johnd",
+      "email": "john@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "e55e",
+      "name": "johnd",
+      "email": "john@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "a889",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "1a33",
+      "name": "fenil",
+      "email": "fenil@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "61a9",
+      "name": "fenil",
+      "email": "fenil@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "7e74",
+      "name": "fenil",
+      "email": "fenil@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2200",
+      "name": "karishma",
+      "email": "karishmafenil@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5930",
+      "name": "shivansh",
+      "email": "shivansh@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "9152"
+    }
+  ]
+}
